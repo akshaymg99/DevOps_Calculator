@@ -5,7 +5,7 @@ public class App
     public static void main(String args[])
     {
         int choice, flag=0;
-        double num1,num2;
+        double num1, num2;
         Scanner scan = new Scanner(System.in);
         System.out.println("Calculator");
         do {
