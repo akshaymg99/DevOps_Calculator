@@ -1,4 +1,5 @@
-FROM openjdk:8-jdk
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM openjdk:8
+ARG target/calculator-devops-1.0-SNAPSHOT.jar calculator-devops-1.0-SNAPSHOT.jar
+RUN mkdir -p -m 777 /var/log/tomcat
+EXPOSE 8088
+ENTRYPOINT ["java","-jar","calculator-devops-1.0-SNAPSHOT.jar"]
